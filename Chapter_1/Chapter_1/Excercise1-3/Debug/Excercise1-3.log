@@ -1,2 +1,4 @@
 ﻿  Excercise1-3.cpp
+C:\Users\Daniel\Documents\Programming\K-R-Book-Excercises\Chapter_1\Chapter_1\Excercise1-3\Excercise1-3.cpp(17,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Daniel\Documents\Programming\K-R-Book-Excercises\Chapter_1\Chapter_1\Excercise1-3\Excercise1-3.cpp(22,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Excercise1-3.vcxproj -> C:\Users\Daniel\Documents\Programming\K-R-Book-Excercises\Chapter_1\Chapter_1\Debug\Excercise1-3.exe
