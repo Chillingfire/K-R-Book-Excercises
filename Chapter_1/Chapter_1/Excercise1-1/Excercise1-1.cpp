@@ -5,5 +5,5 @@
 
 int main()
 {
-    std::cout << "This is a placeholder for excercise 1-1\n";
+    std::cout << "Hello, World\n";
 }
