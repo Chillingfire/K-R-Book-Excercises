@@ -21,7 +21,7 @@ int main()
 		chars++;
 		
 		if (c == '\n') {
-			if (chars > 10) {
+			if (chars > 80) {
 				for (int i = 0; i < chars; i++) {
 					printf("%c", userString[i]);
 				}
