@@ -5,16 +5,49 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    char c;
+    int leftBracket, rightBracket, unbalancedBracket;
+    leftBracket = rightBracket = unbalancedBracket = 0;
+    int leftBrace, rightBrace, unbalancedBrace;
+    leftBrace = rightBrace = unbalancedBrace = 0;
+    int leftParentheses, rightParentheses, unbalancedParentheses;
+    leftParentheses = rightParentheses = unbalancedParentheses = 0;
+
+    while ((c = getchar()) != EOF) {
+        switch (c) {
+            case '[':
+                leftBrace++;
+                break;
+            case ']':
+                rightBrace++;
+                break;
+            case '{': 
+                leftBracket++;
+                break;
+            case '}':
+                rightBracket++;
+                break;
+            case '(':
+                leftParentheses++;
+                break;
+            case ')':
+                rightParentheses++;
+                break;
+        }
+    }
+
+    if (rightBrace >= leftBrace) unbalancedBrace = rightBrace - leftBrace; 
+    else unbalancedBrace = leftBrace - rightBrace;
+
+    if (rightBracket >= leftBracket) unbalancedBracket = rightBracket - leftBracket;
+    else unbalancedBracket = leftBracket - rightBracket;
+
+    if (rightParentheses >= leftParentheses) unbalancedParentheses = rightParentheses - leftParentheses;
+    else unbalancedParentheses = leftParentheses - rightParentheses;
+
+    printf("\n%d unbalanced braces\n%d unbalanced brackets\n%d unbalanced parentheses\n", unbalancedBrace, unbalancedBracket, unbalancedParentheses);
+
+    printf("\n[: %d\n]: %d\n{: %d\n}: %d\n(: %d\n): %d\n", leftBrace, rightBrace, leftBracket, rightBracket, leftParentheses, rightParentheses);
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
