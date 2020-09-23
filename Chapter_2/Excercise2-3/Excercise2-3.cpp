@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 
 void htoi();
 int main()
@@ -38,13 +39,14 @@ void htoi() {
             int sixteenbase = sizeOfHexa - 1;
 
             while (count < sizeOfHexa) {
-                if (sixteenbase > 0) sum += (16 * sixteenbase) * userArrayInt[count];
+                if (sixteenbase > 0) sum += (pow(16, sixteenbase)) * userArrayInt[count];
                 else sum += userArrayInt[count];
                 count++;
                 sixteenbase--;
             }
 
-            printf("%d", sum);
+            printf("%d\n", sum);
+            sizeOfHexa = count = sum = 0;
         }
     }
 }
