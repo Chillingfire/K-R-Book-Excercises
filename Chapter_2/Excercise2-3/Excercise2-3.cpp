@@ -36,6 +36,7 @@ void htoi() {
                 }
             }
 
+            //Used for sixteen power function
             int sixteenbase = sizeOfHexa - 1;
 
             while (count < sizeOfHexa) {
